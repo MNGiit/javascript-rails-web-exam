@@ -24,6 +24,16 @@ function giveQuestion(question) {
     return question.statement;
 }
 
+function giveChoices(question) {
+    let qArr = [];
+    qArr.push(question.correct);
+    qArr.push(question.choiceB);
+    qArr.push(question.choiceC);
+    qArr.push(question.choiceD);
+
+    return qArr;
+}
+
 function fetchTopics() {
 	fetch('http://localhost:3000/topics')
 		.then(response => response.json())
