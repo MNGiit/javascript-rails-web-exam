@@ -95,6 +95,10 @@ function addTopicsToDoc() {
     console.log(topics);
 }
 
+function startQuiz() {
+    alert("Begin quiz!");
+}
+
 fetchTopics();
 addTopicsToDoc();
 let idTest = document.getElementById("test");
