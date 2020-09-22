@@ -44,10 +44,10 @@ function giveCompleteQuestion(question) {
             choices = questionChoices[i];
         }
         else {
-            choices+= " " + questionChoices[i];
+            choices+= '\n' + questionChoices[i];
         }
     }
-    return completeQuestion + " " + choices;
+    return completeQuestion + '\n' + choices;
 }
 
 function fetchTopics() {
