@@ -20,6 +20,12 @@ class Question {
     }
 }
 
+class Quiz {
+    constructor(questions) {
+        this.questions = questions;
+    }
+}
+
 function giveQuestion(question) {
     return question.statement;
 }
@@ -112,7 +118,6 @@ function startQuiz() {
         aArr[i].innerHTML = choices[i];
     }    
 
-    alert("Begin quiz!");
 }
 
 fetchTopics();
@@ -123,11 +128,23 @@ idTest.innerHTML = "if you see this, it means it changed";
 
 new Topic("This is topic 1. Is it in the topics array?")
 new Topic("This is topic 2. Is it in the topics array?")
-new Question("This is question 1. Is it in the questions array?")
-new Question("This is question 2. Is it in the questions array?")
+
 // question, correct, wrong, wrong, wrong
 new Question("What is 1 + 1?", "2", "3", "1", "0")
 new Question("What is 1 * 1?", "1", "3", "2", "0")
+new Question("What is 1 / 1?", "1", "3", "2", "0")
+new Question("What is 2 * 1?", "2", "3", "1", "0")
+new Question("What is 2 + 1?", "3", "2", "1", "0")
+new Question("What is 2 / 1?", "2", "3", "1", "0")
+new Question("What is 3 + 1?", "4", "5", "3", "1")
+new Question("What is 3 * 1?", "3", "2", "1", "0")
+new Question("What is 3 / 1?", "1.5", "3", "1", "2")
+new Question("What is 3 * 0?", "0", "3", "1", "2")
+new Question("What is 2 * 0?", "0", "2", "1", "0")
+new Question("What is 1 * 0?", "0", "4", "1", "-1")
+new Question("What is 2 * 5?", "10", "7", "8", "0")
+new Question("What is 2 * 4?", "8", "6", "2", "0")
+new Question("What is 0 * 5?", "0", "5", "10", "-5")
 
 //document.getElementById("test").innerHTML = "testing write second time"; // doesn't work here for some reason
 
