@@ -7,7 +7,10 @@ class Topic {
     }
 }
 
-let questions = [];
+const tenQuestions = 10; // eliminate "magic number" in code
+let questions = []; // array holds all questions
+let pickedQuestions = []; // array holds picked questions for quiz
+
 class Question {
     constructor(statement, correct, choiceB, choiceC, choiceD) {
         this.statement = statement;
@@ -17,12 +20,6 @@ class Question {
         this.choiceD = choiceD;
 
         questions.push(this);
-    }
-}
-
-class Quiz {
-    constructor(questions) {
-        this.questions = questions;
     }
 }
 
@@ -99,6 +96,12 @@ function addTopicsToDoc() {
         console.log(topics[i]["name"])
     }
     console.log(topics);
+}
+
+function get10Questions() {
+    for (let i = 0; i < tenQuestions; i++) {
+        pickedQuestions.push(questions[i]);
+    }
 }
 
 function startQuiz() {
