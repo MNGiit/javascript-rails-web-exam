@@ -64,6 +64,15 @@ function randomizeChoices(question) {
     return choices;
 }
 
+function evaluateAnswer(question, answer) {
+    if (question.correct == answer) {
+        return "The answer is correct.";
+    }
+    else {
+        return "The answer is wrong.";
+    }
+}
+
 function fetchTopics() {
 	fetch('http://localhost:3000/topics')
 		.then(response => response.json())
