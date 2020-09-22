@@ -34,6 +34,22 @@ function giveChoices(question) {
     return qArr;
 }
 
+function giveCompleteQuestion(question) {
+    let completeQuestion = giveQuestion(question);
+    let choices = "";
+    let choicesLength = giveChoices(question).length;
+    let questionChoices = giveChoices(question);
+    for (let i = 0; i < choicesLength; i++) {
+        if (i == 0) {
+            choices = questionChoices[i];
+        }
+        else {
+            choices+= " " + questionChoices[i];
+        }
+    }
+    return completeQuestion + " " + choices;
+}
+
 function fetchTopics() {
 	fetch('http://localhost:3000/topics')
 		.then(response => response.json())
