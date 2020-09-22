@@ -39,6 +39,9 @@ function giveCompleteQuestion(question) {
     let choices = "";
     let choicesLength = giveChoices(question).length;
     let questionChoices = giveChoices(question);
+
+    // randomize order of choices and correct answer
+
     for (let i = 0; i < choicesLength; i++) {
         if (i == 0) {
             choices = questionChoices[i];
@@ -48,6 +51,17 @@ function giveCompleteQuestion(question) {
         }
     }
     return completeQuestion + '\n' + choices;
+}
+
+function randomizeChoices(question) {
+    let choices = giveChoices(question);
+    for (let i = 0; i < choices.length; i++) {
+        let ran = Math.floor(Math.random() * (i + 1));
+        let temp = choices[i];
+        choices[i] = choices[ran];
+        choices[ran] = temp;
+    }
+    return choices;
 }
 
 function fetchTopics() {
