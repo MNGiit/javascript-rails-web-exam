@@ -15,11 +15,14 @@ class Question {
         this.choiceB = choiceB;
         this.choiceC = choiceC;
         this.choiceD = choiceD;
-        
+
         questions.push(this);
     }
 }
 
+function giveQuestion(question) {
+    return question.statement;
+}
 
 function fetchTopics() {
 	fetch('http://localhost:3000/topics')
