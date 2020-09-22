@@ -3,6 +3,7 @@ let topics = [];
 class Topic {
     constructor(name) {
         this.name = name;
+        topics.push(this);
     }
 }
 
@@ -42,6 +43,11 @@ addTopicsToDoc();
 let idTest = document.getElementById("test");
 idTest.innerHTML = topics; // placed script at bottom of <body> so it doesn't say null...it works now sorta
 idTest.innerHTML = "if you see this, it means it changed";
+
+new Topic("This is topic 1. Is it in the topics array?")
+new Topic("This is topic 2. Is it in the topics array?")
+new Question("This is question 1. Is it in the questions array?")
+new Question("This is question 2. Is it in the questions array?")
 //document.getElementById("test").innerHTML = "testing write second time"; // doesn't work here for some reason
 
 // document.write("Moof")
