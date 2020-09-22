@@ -1,11 +1,19 @@
 // class
+let topics = [];
 class Topic {
     constructor(name) {
         this.name = name;
     }
 }
 
-let topics = [];
+let questions = [];
+class Question {
+    constructor(statement) {
+        this.statement = statement;
+        questions.push(this);
+    }
+}
+
 
 function fetchTopics() {
 	fetch('http://localhost:3000/topics')
@@ -17,11 +25,23 @@ function fetchTopics() {
     })
 }
 
-fetchTopics();
+function addTopicsToDoc() {
+    const x = document.getElementById("topics");
+    let textNode = "";
+    // console.log("test message");
+    for (let i = 0; i< topics.length; i++) {
+        textNode = document.createTextNode(topics[i].name);
+        document.getElementById("topics").appendChild(textNode);
+        console.log(topics[i]["name"])
+    }
+    console.log(topics);
+}
 
+fetchTopics();
+addTopicsToDoc();
 let idTest = document.getElementById("test");
 idTest.innerHTML = topics; // placed script at bottom of <body> so it doesn't say null...it works now sorta
-
+idTest.innerHTML = "if you see this, it means it changed";
 //document.getElementById("test").innerHTML = "testing write second time"; // doesn't work here for some reason
 
 // document.write("Moof")
