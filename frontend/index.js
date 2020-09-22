@@ -9,8 +9,13 @@ class Topic {
 
 let questions = [];
 class Question {
-    constructor(statement) {
+    constructor(statement, correct, choiceB, choiceC, choiceD) {
         this.statement = statement;
+        this.correct = correct;
+        this.choiceB = choiceB;
+        this.choiceC = choiceC;
+        this.choiceD = choiceD;
+        
         questions.push(this);
     }
 }
@@ -48,6 +53,10 @@ new Topic("This is topic 1. Is it in the topics array?")
 new Topic("This is topic 2. Is it in the topics array?")
 new Question("This is question 1. Is it in the questions array?")
 new Question("This is question 2. Is it in the questions array?")
+// question, correct, wrong, wrong, wrong
+new Question("What is 1 + 1?", "2", "3", "1", "0")
+new Question("What is 1 * 1?", "1", "3", "2", "0")
+
 //document.getElementById("test").innerHTML = "testing write second time"; // doesn't work here for some reason
 
 // document.write("Moof")
