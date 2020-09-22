@@ -96,6 +96,22 @@ function addTopicsToDoc() {
 }
 
 function startQuiz() {
+    let q = document.getElementById("question");
+    let aArr = [];
+    aArr.push(document.getElementById("choice1"));
+    aArr.push(document.getElementById("choice2"));
+    aArr.push(document.getElementById("choice3"));
+    aArr.push(document.getElementById("choice4"));
+
+    let question = questions[2];
+    let choices = randomizeChoices(question);
+
+    q.innerHTML = giveQuestion(question);
+
+    for (let i = 0; i < choices.length; i++) {
+        aArr[i].innerHTML = choices[i];
+    }    
+
     alert("Begin quiz!");
 }
 
