@@ -10,6 +10,7 @@ class Topic {
 const tenQuestions = 10; // eliminate "magic number" in code
 let questions = []; // array holds all questions
 let pickedQuestions = []; // array holds picked questions for quiz
+let answerKey = []; // array holds answers for picked questions for quiz
 
 class Question {
     constructor(statement, correct, choiceB, choiceC, choiceD) {
@@ -102,6 +103,27 @@ function get10Questions() {
     for (let i = 0; i < tenQuestions; i++) {
         pickedQuestions.push(questions[i]);
     }
+}
+// first get 10 questions
+// second randomize choices for each question
+// third add randomized choices to question
+// fourth find where answer is in randomized choices and add it to answerkey
+// fifth remove correct, choiceB, choiceC, choiceD from pickedQuestions
+
+function createAnswerKey() {
+    let a = 0;
+    // temp to hold questions after change
+    let temp = [];
+    for (let i = 0; i < pickedQuestions.length; i++) {
+        
+        // remove correct, choiceB, choiceC, choiceD
+        delete pickedQuestions[i].correct;
+        delete pickedQuestions[i].choiceB;
+        delete pickedQuestions[i].choiceC;
+        delete pickedQuestions[i].choiceD;
+        a++;
+    }
+    return a;
 }
 
 function startQuiz() {
