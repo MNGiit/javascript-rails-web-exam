@@ -116,6 +116,8 @@ function createAnswerKey() {
     let temp = [];
     for (let i = 0; i < pickedQuestions.length; i++) {
         
+        // randomize choices and assign it to choices
+        pickedQuestions[i].choices = randomizeChoices(pickedQuestions[i]);
         // remove correct, choiceB, choiceC, choiceD
         delete pickedQuestions[i].correct;
         delete pickedQuestions[i].choiceB;
