@@ -133,14 +133,15 @@ function startQuiz() {
     aArr.push(document.getElementById("choice2"));
     aArr.push(document.getElementById("choice3"));
     aArr.push(document.getElementById("choice4"));
+    get10Questions();
+    createAnswerKey();
+    let question = pickedQuestions[0];
+    // let choices = randomizeChoices(question);
+    // q.innerHTML = giveQuestion(question);
+    q.innerHTML = question.statement;
 
-    let question = questions[2];
-    let choices = randomizeChoices(question);
-
-    q.innerHTML = giveQuestion(question);
-
-    for (let i = 0; i < choices.length; i++) {
-        aArr[i].innerHTML = choices[i];
+    for (let i = 0; i < question.choices.length; i++) {
+        aArr[i].innerHTML = question.choices[i];
     }    
 
 }
