@@ -104,14 +104,8 @@ function get10Questions() {
         pickedQuestions.push(questions[i]);
     }
 }
-// first get 10 questions
-// second randomize choices for each question
-// third add randomized choices to question
-// fourth find where answer is in randomized choices and add it to answerkey
-// fifth remove correct, choiceB, choiceC, choiceD from pickedQuestions
 
 function createAnswerKey() {
-    let a = 0;
     // temp to hold questions after change
     let temp = [];
     for (let i = 0; i < pickedQuestions.length; i++) {
@@ -129,9 +123,7 @@ function createAnswerKey() {
         delete pickedQuestions[i].choiceB;
         delete pickedQuestions[i].choiceC;
         delete pickedQuestions[i].choiceD;
-        a++;
     }
-    return a;
 }
 
 function startQuiz() {
