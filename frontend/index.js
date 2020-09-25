@@ -118,6 +118,12 @@ function createAnswerKey() {
         
         // randomize choices and assign it to choices
         pickedQuestions[i].choices = randomizeChoices(pickedQuestions[i]);
+        // find where answer is in randomized choices then add it to answer key
+        for (let j = 0; j < pickedQuestions[i].choices.length; j++) {
+            if (pickedQuestions[i].correct == pickedQuestions[i].choices[j]) {
+                answerKey.push(j);
+            }
+        }
         // remove correct, choiceB, choiceC, choiceD
         delete pickedQuestions[i].correct;
         delete pickedQuestions[i].choiceB;
