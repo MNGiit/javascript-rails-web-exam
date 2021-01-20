@@ -148,8 +148,16 @@ function startQuiz() {
     for (let i = 0; i < question.choices.length; i++) {
         aArr[i].innerHTML = question.choices[i];
     }    
+    // questionIndex++;
+}
+
+function nextQuestion() {
     questionIndex++;
 }
+
+
+
+
 
 fetchTopics();
 addTopicsToDoc();
