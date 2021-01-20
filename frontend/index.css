@@ -2,3 +2,7 @@ h1 {
 	background-color: #bb1919;
 	color: #ac9119;
 }
+
+#results {
+    display: none;
+}
