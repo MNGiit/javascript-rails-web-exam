@@ -11,6 +11,7 @@ const tenQuestions = 10; // eliminate "magic number" in code
 let questions = []; // array holds all questions
 let pickedQuestions = []; // array holds picked questions for quiz
 let answerKey = []; // array holds answers for picked questions for quiz
+let questionIndex = 0; // index will navigate through pickedQuestions
 
 class Question {
     constructor(statement, correct, choiceB, choiceC, choiceD) {
@@ -135,7 +136,11 @@ function startQuiz() {
     aArr.push(document.getElementById("choice4"));
     get10Questions();
     createAnswerKey();
-    let question = pickedQuestions[0];
+
+    // set index to 0
+    questionIndex = 0;
+
+    let question = pickedQuestions[questionIndex];
     // let choices = randomizeChoices(question);
     // q.innerHTML = giveQuestion(question);
     q.innerHTML = question.statement;
@@ -143,7 +148,7 @@ function startQuiz() {
     for (let i = 0; i < question.choices.length; i++) {
         aArr[i].innerHTML = question.choices[i];
     }    
-
+    questionIndex++;
 }
 
 fetchTopics();
