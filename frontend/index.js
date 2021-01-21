@@ -168,8 +168,8 @@ function nextQuestion() {
     }       
 }
 
-function pickAnswer() {
-    alert("Button was clicked!");
+function pickAnswer(selected) {
+    alert("Button was clicked! Value is "+ selected);
 }
 
 
