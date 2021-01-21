@@ -168,6 +168,9 @@ function nextQuestion() {
     }       
 }
 
+function pickAnswer() {
+    alert("Button was clicked!");
+}
 
 
 
