@@ -153,7 +153,7 @@ function startQuiz() {
 }
 
 function nextQuestion() {
-    if(questionIndex < pickedQuestions.length) {
+    if(questionIndex < pickedQuestions.length-1) {
         questionIndex++;
         let q = document.getElementById("question");
         let aArr = [];
