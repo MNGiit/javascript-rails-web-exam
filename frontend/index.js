@@ -171,6 +171,11 @@ function nextQuestion() {
         }  
     }
     else {
+        for (let i = 0; i < answerKey.length; i++){
+            if(answerKey[i] == answers[i]) {
+                quizScore++;
+            }
+        }
         alert("Congrats, you're done with the quiz, with the score of " + quizScore);
     }
     
