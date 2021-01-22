@@ -153,20 +153,27 @@ function startQuiz() {
 }
 
 function nextQuestion() {
-    questionIndex++;
-    let q = document.getElementById("question");
-    let aArr = [];
-    aArr.push(document.getElementById("choice1"));
-    aArr.push(document.getElementById("choice2"));
-    aArr.push(document.getElementById("choice3"));
-    aArr.push(document.getElementById("choice4"));
-
-    let question = pickedQuestions[questionIndex];
-    q.innerHTML = question.statement;
-
-    for (let i = 0; i < question.choices.length; i++) {
-        aArr[i].innerHTML = question.choices[i];
-    }       
+    if(questionIndex < pickedQuestions.length) {
+        questionIndex++;
+        let q = document.getElementById("question");
+        let aArr = [];
+        aArr.push(document.getElementById("choice1"));
+        aArr.push(document.getElementById("choice2"));
+        aArr.push(document.getElementById("choice3"));
+        aArr.push(document.getElementById("choice4"));
+    
+        let question = pickedQuestions[questionIndex];
+        q.innerHTML = question.statement;
+    
+        for (let i = 0; i < question.choices.length; i++) {
+            aArr[i].innerHTML = question.choices[i];
+        }  
+    }
+    else {
+        alert("Quiz is done.");
+    }
+    
+     
 }
 
 function pickAnswer(selected) {
