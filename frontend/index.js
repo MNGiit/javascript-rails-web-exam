@@ -177,13 +177,14 @@ function nextQuestion() {
             }
         }
         alert("Congrats, you're done with the quiz, with the score of " + quizScore);
+        alert((quizScore/answerKey.length)*100);
     }
     
      
 }
 
 function pickAnswer(selected) {
-    alert("Button was clicked! Value is "+ selected);
+    // alert("Button was clicked! Value is "+ selected);
     answers[questionIndex] = selected;
 }
 
@@ -208,7 +209,7 @@ new Question("What is 2 + 1?", "3", "2", "1", "0")
 new Question("What is 2 / 1?", "2", "3", "1", "0")
 new Question("What is 3 + 1?", "4", "5", "3", "1")
 new Question("What is 3 * 1?", "3", "2", "1", "0")
-new Question("What is 3 / 1?", "1.5", "3", "1", "2")
+new Question("What is 3 / 1?", "3", "1", "1.5", "2")
 new Question("What is 3 * 0?", "0", "3", "1", "2")
 new Question("What is 2 * 0?", "0", "2", "1", "0")
 new Question("What is 1 * 0?", "0", "4", "1", "-1")
