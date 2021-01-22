@@ -3,6 +3,10 @@ h1 {
 	color: #ac9119;
 }
 
+#qQuestions {
+    display: none;
+}
+
 #results {
     display: none;
 }

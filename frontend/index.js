@@ -151,6 +151,7 @@ function startQuiz() {
         aArr[i].innerHTML = question.choices[i];
     }    
     // questionIndex++;
+    document.getElementById("qQuestions").style.display = "block";
 }
 
 function nextQuestion() {
