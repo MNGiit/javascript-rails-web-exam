@@ -176,8 +176,9 @@ function nextQuestion() {
                 quizScore++;
             }
         }
+        document.getElementById("qQuestions").style.display = "none";
         alert("Congrats, you're done with the quiz, with the score of " + quizScore);
-        alert((quizScore/answerKey.length)*100);
+        alert((quizScore/answerKey.length)*100); 
     }
     
      
