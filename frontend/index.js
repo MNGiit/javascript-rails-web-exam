@@ -178,6 +178,7 @@ function nextQuestion() {
             }
         }
         document.getElementById("qQuestions").style.display = "none";
+        document.getElementById("results").style.display = "block";
         alert("Congrats, you're done with the quiz, with the score of " + quizScore);
         alert((quizScore/answerKey.length)*100); 
     }
