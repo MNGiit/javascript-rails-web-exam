@@ -179,6 +179,7 @@ function nextQuestion() {
         }
         document.getElementById("qQuestions").style.display = "none";
         document.getElementById("results").style.display = "block";
+        document.getElementById("showResults").innerHTML = "Congrats, you're done with the quiz, with the score of " + quizScore*10;
         alert("Congrats, you're done with the quiz, with the score of " + quizScore);
         alert((quizScore/answerKey.length)*100); 
     }
