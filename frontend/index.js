@@ -133,6 +133,7 @@ function createAnswerKey() {
 }
 
 function startQuiz() {
+    document.getElementById("startQuiz").style.display = "none";
     if(pickedQuestions.length == 0) {
         // alert("Already have questions.");
         get10Questions();
