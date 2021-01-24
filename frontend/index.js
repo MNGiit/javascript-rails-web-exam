@@ -193,7 +193,7 @@ function nextQuestion() {
 }
 
 function retakeQuiz() {
-
+    startQuiz();
 }
 
 function pickAnswer(selected) {
