@@ -103,6 +103,9 @@ function addTopicsToDoc() {
 }
 
 function get10Questions() {
+    if(pickedQuestions.length > 0) {
+        pickedQuestions = [];
+    }
     for (let i = 0; i < tenQuestions; i++) {
         pickedQuestions.push(questions[i]);
     }
@@ -183,8 +186,10 @@ function nextQuestion() {
         alert("Congrats, you're done with the quiz, with the score of " + quizScore);
         alert((quizScore/answerKey.length)*100); 
     }
-    
-     
+}
+
+function retakeQuiz() {
+
 }
 
 function pickAnswer(selected) {
