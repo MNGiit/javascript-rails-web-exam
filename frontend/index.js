@@ -133,14 +133,17 @@ function createAnswerKey() {
 }
 
 function startQuiz() {
+    if(pickedQuestions.length == 0) {
+        // alert("Already have questions.");
+        get10Questions();
+        createAnswerKey();
+    }
     let q = document.getElementById("question");
     let aArr = [];
     aArr.push(document.getElementById("choice1"));
     aArr.push(document.getElementById("choice2"));
     aArr.push(document.getElementById("choice3"));
     aArr.push(document.getElementById("choice4"));
-    get10Questions();
-    createAnswerKey();
 
     // set index to 0
     questionIndex = 0;
@@ -183,8 +186,8 @@ function nextQuestion() {
         document.getElementById("qQuestions").style.display = "none";
         document.getElementById("results").style.display = "block";
         document.getElementById("showResults").innerHTML = "Congrats, you're done with the quiz, with the score of " + quizScore*10;
-        alert("Congrats, you're done with the quiz, with the score of " + quizScore);
-        alert((quizScore/answerKey.length)*100); 
+        // alert("Congrats, you're done with the quiz, with the score of " + quizScore);
+        // alert((quizScore/answerKey.length)*100); 
     }
 }
 
