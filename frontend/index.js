@@ -194,6 +194,7 @@ function nextQuestion() {
 
 function retakeQuiz() {
     startQuiz();
+    document.getElementById("results").style.display = "none";
 }
 
 function pickAnswer(selected) {
