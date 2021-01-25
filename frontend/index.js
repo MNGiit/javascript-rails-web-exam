@@ -156,7 +156,8 @@ function startQuiz() {
 
     for (let i = 0; i < question.choices.length; i++) {
         aArr[i].innerHTML = question.choices[i];
-    }    
+    }
+    document.getElementById("number").innerHTML = `${questionIndex + 1}` + "/" + `${tenQuestions}`;    
     // questionIndex++;
     document.getElementById("qQuestions").style.display = "block";
 }
