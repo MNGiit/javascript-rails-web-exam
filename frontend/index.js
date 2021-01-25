@@ -165,6 +165,7 @@ function startQuiz() {
 function nextQuestion() {
     if(questionIndex < pickedQuestions.length-1) {
         questionIndex++;
+        document.getElementById("number").innerHTML = `${questionIndex + 1}` + "/" + `${tenQuestions}`;
         let q = document.getElementById("question");
         let aArr = [];
         aArr.push(document.getElementById("choice1"));
