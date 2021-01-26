@@ -211,7 +211,7 @@ function pickAnswer(selected) {
 fetchTopics();
 addTopicsToDoc();
 let idTest = document.getElementById("test");
-idTest.innerHTML = topics; // placed script at bottom of <body> so it doesn't say null...it works now sorta
+// idTest.innerHTML = topics; // placed script at bottom of <body> so it doesn't say null...it works now sorta
 // idTest.innerHTML = "if you see this, it means it changed";
 
 new Topic("This is topic 1. Is it in the topics array?")
