@@ -94,7 +94,7 @@ function addTopicsToDoc() {
     const x = document.getElementById("topics");
     let textNode = "";
     // console.log("test message");
-    for (let i = 0; i< topics.length; i++) {
+    for (let i = 0; i < topics.length; i++) {
         textNode = document.createTextNode(topics[i].name);
         document.getElementById("topics").appendChild(textNode);
         console.log(topics[i]["name"])
@@ -102,6 +102,7 @@ function addTopicsToDoc() {
     console.log(topics);
 }
 
+// put these functions in a separate file
 function get10Questions() {
     if(pickedQuestions.length > 0) {
         pickedQuestions = [];
@@ -203,7 +204,7 @@ function pickAnswer(selected) {
     // alert("Button was clicked! Value is "+ selected);
     answers[questionIndex] = selected;
 }
-
+// put functions above in a separate file
 
 
 
@@ -211,7 +212,7 @@ fetchTopics();
 addTopicsToDoc();
 let idTest = document.getElementById("test");
 idTest.innerHTML = topics; // placed script at bottom of <body> so it doesn't say null...it works now sorta
-idTest.innerHTML = "if you see this, it means it changed";
+// idTest.innerHTML = "if you see this, it means it changed";
 
 new Topic("This is topic 1. Is it in the topics array?")
 new Topic("This is topic 2. Is it in the topics array?")
