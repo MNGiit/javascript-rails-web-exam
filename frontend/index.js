@@ -85,7 +85,8 @@ function fetchTopics() {
 		.then(response => response.json())
 		.then(json => {
             for (let i = 0; i< json.length; i++) {
-                topics.push(new Topic(json[i]["name"]));
+                // topics.push(new Topic(json[i]["name"]));
+                new Topic(json[i]["name"]);
             }
     })
 }
