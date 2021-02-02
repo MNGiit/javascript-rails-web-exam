@@ -94,14 +94,43 @@ function fetchTopics() {
 function addTopicsToDoc() {
     const x = document.getElementById("topics");
     let textNode = "";
-    // console.log("test message");
+    // console.log(x);
     for (let i = 0; i < topics.length; i++) {
+        // console.log(topics[i]); // isn't showing
+        // console.log(topics.length); // isn't showing
+        console.log(i);
         textNode = document.createTextNode(topics[i].name);
         document.getElementById("topics").appendChild(textNode);
-        console.log(topics[i]["name"])
+        console.log(topics[i]["name"]);
+
+        // create button
+        let button = document.createElement("BUTTON");
+        // place topic name in text
+        button.innerHTML = topics[i].name;
+        // add button to html topics
+        x.appendChild(button);
     }
-    console.log(topics);
+    // console.log(topics);
 }
+
+function addTopicButtonsToDoc() {
+    const x = document.getElementById("topics");
+    // fetchTopics();
+    // console.log("Inside addTopicsButtonToDoc");
+    // console.log("There are this many topics: " + topics.length);
+    // console.log(topics.length);
+    for (let i = 0; i < topics.length; i++) {
+        // console.log("Inside for loop " + i);
+        // create button
+        let button = document.createElement("BUTTON");
+        // place topic name in text
+        button.innerHTML = topics[i].name;
+        // add button to html topics
+        x.appendChild(button);  
+    }    
+  
+}
+
 
 // put these functions in a separate file
 function get10Questions() {
@@ -210,8 +239,10 @@ function pickAnswer(selected) {
 
 
 fetchTopics();
-addTopicsToDoc();
-let idTest = document.getElementById("test");
+setTimeout(addTopicButtonsToDoc, 250);
+// setTimeout(myFunction, 3000)
+// addTopicsToDoc();
+// let idTest = document.getElementById("test");
 // idTest.innerHTML = topics; // placed script at bottom of <body> so it doesn't say null...it works now sorta
 // idTest.innerHTML = "if you see this, it means it changed";
 
