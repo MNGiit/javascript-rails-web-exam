@@ -6,7 +6,7 @@ class CreateQuestions < ActiveRecord::Migration[5.2]
       t.string :distractor_b
       t.string :distractor_c
       t.string :distractor_d
-      t.references :exam, foreign_key: true
+      # t.references :exam, foreign_key: true
       t.references :topic, foreign_key: true
 
       t.timestamps
