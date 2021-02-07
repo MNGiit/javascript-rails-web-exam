@@ -8,6 +8,7 @@
 topic_html = Topic.create(name: "HTML")
 topic_css = Topic.create(name: "CSS")
 topic_frontend = Topic.create(name: "Front End Web Development")
+topic_simple_math = Topic.create(name: "Simple Math")
 
 #q1 = Question.create(stem: "What is 1 + 1?", distractor_answer: "2", distractor_b: "1",
 #distractor_c: "3", distractor_d: "4")
