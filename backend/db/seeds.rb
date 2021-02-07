@@ -18,7 +18,8 @@ mathquestion_1 = Question.create(
     distractor_answer: "2", # 1+1 is 2
     distractor_b: "3", # 1+1 is 3
     distractor_c: "1", # 1+1 is 1
-    distractor_d: "0"  # 1+1 is 0
+    distractor_d: "0", # 1+1 is 0
+    topic: topic_simple_math
 )
 
 mathquestion_2 = Question.create(
@@ -26,7 +27,8 @@ mathquestion_2 = Question.create(
     distractor_answer: "1",
     distractor_b: "3",
     distractor_c: "2",
-    distractor_d: "0"
+    distractor_d: "0",
+    topic: topic_simple_math
 )
 
 mathquestion_3 = Question.create(
@@ -34,7 +36,8 @@ mathquestion_3 = Question.create(
     distractor_answer: "1",
     distractor_b: "3",
     distractor_c: "2",
-    distractor_d: "0"
+    distractor_d: "0",
+    topic: topic_simple_math
 )
 
 mathquestion_4 = Question.create(
@@ -42,7 +45,8 @@ mathquestion_4 = Question.create(
     distractor_answer: "2",
     distractor_b: "3",
     distractor_c: "1",
-    distractor_d: "0"
+    distractor_d: "0",
+    topic: topic_simple_math
 )
 
 mathquestion_5 = Question.create(
@@ -50,7 +54,8 @@ mathquestion_5 = Question.create(
     distractor_answer: "3",
     distractor_b: "2",
     distractor_c: "1",
-    distractor_d: "0"
+    distractor_d: "0",
+    topic: topic_simple_math
 )
 
 mathquestion_6 = Question.create(
@@ -58,7 +63,8 @@ mathquestion_6 = Question.create(
     distractor_answer: "2",
     distractor_b: "3",
     distractor_c: "1",
-    distractor_d: "0"
+    distractor_d: "0",
+    topic: topic_simple_math
 )
 
 mathquestion_7 = Question.create(
@@ -66,7 +72,8 @@ mathquestion_7 = Question.create(
     distractor_answer: "4",
     distractor_b: "5",
     distractor_c: "3",
-    distractor_d: "1"
+    distractor_d: "1",
+    topic: topic_simple_math
 )
 
 mathquestion_8 = Question.create(
@@ -74,7 +81,8 @@ mathquestion_8 = Question.create(
     distractor_answer: "3",
     distractor_b: "2",
     distractor_c: "1",
-    distractor_d: "0"
+    distractor_d: "0",
+    topic: topic_simple_math
 )
 
 mathquestion_9 = Question.create(
@@ -82,7 +90,8 @@ mathquestion_9 = Question.create(
     distractor_answer: "3",
     distractor_b: "1",
     distractor_c: "1.5",
-    distractor_d: "2"
+    distractor_d: "2",
+    topic: topic_simple_math
 )
 
 mathquestion_10 = Question.create(
@@ -90,7 +99,8 @@ mathquestion_10 = Question.create(
     distractor_answer: "0",
     distractor_b: "3",
     distractor_c: "1",
-    distractor_d: "2"
+    distractor_d: "2",
+    topic: topic_simple_math
 )
 
 mathquestion_11 = Question.create(
@@ -98,7 +108,8 @@ mathquestion_11 = Question.create(
     distractor_answer: "0",
     distractor_b: "2",
     distractor_c: "1",
-    distractor_d: "0"
+    distractor_d: "0",
+    topic: topic_simple_math
 )
 
 mathquestion_12 = Question.create(
@@ -106,7 +117,8 @@ mathquestion_12 = Question.create(
     distractor_answer: "0",
     distractor_b: "4",
     distractor_c: "1",
-    distractor_d: "-1"
+    distractor_d: "-1",
+    topic: topic_simple_math
 )
 
 mathquestion_13 = Question.create(
@@ -114,7 +126,8 @@ mathquestion_13 = Question.create(
     distractor_answer: "10",
     distractor_b: "7",
     distractor_c: "8",
-    distractor_d: "0"
+    distractor_d: "0",
+    topic: topic_simple_math
 )
 
 mathquestion_14 = Question.create(
@@ -122,10 +135,12 @@ mathquestion_14 = Question.create(
     distractor_answer: "8",
     distractor_b: "6",
     distractor_c: "2",
-    distractor_d: "0"
+    distractor_d: "0",
+    topic: topic_simple_math
 )
 
 mathquestion_15 = Question.create(
+    topic: topic_simple_math,
     stem: "What is 0 * 5?",
     distractor_answer: "0",
     distractor_b: "5",
