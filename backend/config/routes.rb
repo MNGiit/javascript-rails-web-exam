@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   # resources :topics               #fetchTopics works with this line
   # get '/topics' => 'topics#index' #fetchTopics works with this line
-  resources :topics, only: [:index]
+  resources :topics, only: [:index, :quiz]
 
   resources :questions
   resources :exams

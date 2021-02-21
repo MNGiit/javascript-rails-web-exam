@@ -13,5 +13,6 @@ class TopicsController < ApplicationController
         # find questions related to topic
         # if found, render questions
         # else render topic doesn't have any questions
+        render plain: "quiz method called from topics controller"
     end
 end
