@@ -8,4 +8,10 @@ class TopicsController < ApplicationController
         end
         # render json: sightings, include: [:bird, :location]
     end
+
+    def quiz
+        # find questions related to topic
+        # if found, render questions
+        # else render topic doesn't have any questions
+    end
 end
