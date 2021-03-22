@@ -15,18 +15,6 @@ let answers = [];   // array holds answers picked by user
 let quizScore = 0;
 let questionIndex = 0; // index will navigate through pickedQuestions
 
-class Question {
-    constructor(statement, correct, choiceB, choiceC, choiceD) {
-        this.statement = statement;
-        this.correct = correct;
-        this.choiceB = choiceB;
-        this.choiceC = choiceC;
-        this.choiceD = choiceD;
-
-        questions.push(this);
-    }
-}
-
 function giveQuestion(question) {
     return question.statement;
 }
