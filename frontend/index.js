@@ -78,6 +78,15 @@ function fetchQuiz() {
             for (let i = 0; i< json.length; i++) {
                 // topics.push(new Topic(json[i]["name"]));
                 // new Topic(json[i]["name"]);
+                // question, correct, wrong, wrong, wrong
+                // new Question("What is 1 + 1?", "2", "3", "1", "0")
+                // stem
+                // distractor_answer
+                // distractor_b
+                // distractor_c
+                // distractor_d
+                new Question(json[i]["stem"], json[i]["distractor_answer"], json[i]["distractor_b"],
+                json[i]["distractor_c"], json[i]["distractor_d"]);
             }
     })
 }
