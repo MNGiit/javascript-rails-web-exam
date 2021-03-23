@@ -1,12 +1,3 @@
-// class
-let topics = [];
-class Topic {
-    constructor(name) {
-        this.name = name;
-        topics.push(this);
-    }
-}
-
 const tenQuestions = 10; // eliminate "magic number" in code
 let questions = []; // array holds all questions
 let pickedQuestions = []; // array holds picked questions for quiz
