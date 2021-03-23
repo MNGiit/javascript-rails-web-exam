@@ -10,9 +10,16 @@ class TopicsController < ApplicationController
     end
 
     def quiz
+        # get questions
+        questions_2 = Question.all
+        if questions_2
+            render json: questions_2
+        else
+            render plain: "questions not found"
+        end
         # find questions related to topic
         # if found, render questions
         # else render topic doesn't have any questions
-        render plain: "quiz method called from topics controller"
+        # render plain: "quiz method called from topics controller"
     end
 end
