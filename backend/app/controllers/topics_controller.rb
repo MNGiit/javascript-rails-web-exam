@@ -11,9 +11,9 @@ class TopicsController < ApplicationController
 
     def quiz
         # get questions
-        questions_2 = Question.all
-        if questions_2
-            render json: questions_2
+        questions = Question.all
+        if questions
+            render json: questions
         else
             render plain: "questions not found"
         end
