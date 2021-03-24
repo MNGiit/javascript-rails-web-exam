@@ -1,3 +1,5 @@
+let quiz = null;
+
 const tenQuestions = 10; // eliminate "magic number" in code
 let questions = []; // array holds all questions
 let pickedQuestions = []; // array holds picked questions for quiz
