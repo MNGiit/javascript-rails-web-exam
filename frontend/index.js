@@ -1,4 +1,29 @@
 let quiz = null;
+// click on topic button
+// topic button first fetches questions
+function fetchQuestionsStartQuiz() {
+	fetch('http://localhost:3000/topics/quiz')
+		.then(response => response.json())
+		.then(json => {
+            console.log(json);
+            for (let i = 0; i< json.length; i++) {
+                // topics.push(new Topic(json[i]["name"]));
+                // new Topic(json[i]["name"]);
+                // question, correct, wrong, wrong, wrong
+                // new Question("What is 1 + 1?", "2", "3", "1", "0")
+                // stem
+                // distractor_answer
+                // distractor_b
+                // distractor_c
+                // distractor_d
+                new Question(json[i]["stem"], json[i]["distractor_answer"], json[i]["distractor_b"],
+                json[i]["distractor_c"], json[i]["distractor_d"]);
+            }
+    }) // end of fetch
+    quiz = new Quiz(questions, 10);
+} // end of function
+// topic button second starts quiz
+
 
 const tenQuestions = 10; // eliminate "magic number" in code
 let questions = []; // array holds all questions
