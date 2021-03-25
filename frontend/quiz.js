@@ -60,7 +60,7 @@ class Quiz {
         document.getElementById("topics").style.display = "none";
 
         //
-        // let q = document.getElementById("question");
+        let q = document.getElementById("question");
         let choices = [];
         choices.push(document.getElementById("choice1"));
         choices.push(document.getElementById("choice2"));
@@ -71,8 +71,18 @@ class Quiz {
         //
         let questionIndex = 0;
         let question = questions[questionIndex];
-        console.log(question);
+        console.log(question.statement);
 
+        //
+        q.innerHTML = question.statement;
+        console.log(q);
+
+        for (let i = 0; i < question.choices.length; i++) {
+            choices[i].innerHTML = question.choices[i];
+        }
+
+        document.getElementById("number").innerHTML = `${questionIndex + 1}` + "/" + `${questions.length}`;    
+        document.getElementById("qQuestions").style.display = "block";
     }
 }
 
