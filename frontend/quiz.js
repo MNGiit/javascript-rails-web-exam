@@ -54,9 +54,21 @@ class Quiz {
 
     startQuiz() {
         console.log("Starting Quiz");
+        // don't display
         document.getElementById("startQuiz").style.display = "none";
         document.getElementById("fetchQuiz").style.display = "none";
         document.getElementById("topics").style.display = "none";
+
+        //
+        // let q = document.getElementById("question");
+        let choices = [];
+        choices.push(document.getElementById("choice1"));
+        choices.push(document.getElementById("choice2"));
+        choices.push(document.getElementById("choice3"));
+        choices.push(document.getElementById("choice4"));
+        
+        // 
+
     }
 }
 
