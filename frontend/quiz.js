@@ -54,6 +54,9 @@ class Quiz {
 
     startQuiz() {
         console.log("Starting Quiz");
+        document.getElementById("startQuiz").style.display = "none";
+        document.getElementById("fetchQuiz").style.display = "none";
+        document.getElementById("topics").style.display = "none";
     }
 }
 
