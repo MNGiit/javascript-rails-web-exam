@@ -51,6 +51,10 @@ class Quiz {
         choices.push(question.choiceD);
         return choices;
     }
+
+    startQuiz() {
+        console.log("Starting Quiz");
+    }
 }
 
 
