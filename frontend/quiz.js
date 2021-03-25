@@ -66,8 +66,12 @@ class Quiz {
         choices.push(document.getElementById("choice2"));
         choices.push(document.getElementById("choice3"));
         choices.push(document.getElementById("choice4"));
-        
-        // 
+        //
+
+        //
+        let questionIndex = 0;
+        let question = questions[questionIndex];
+        console.log(question);
 
     }
 }
