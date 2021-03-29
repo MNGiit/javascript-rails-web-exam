@@ -74,18 +74,37 @@ class Quiz {
         for (let i = 0; i < question.choices.length; i++) {
             choices[i].innerHTML = question.choices[i];
         }
-        // set progress of quiz
-        document.getElementById("number").innerHTML = `${questionIndex + 1}` + "/" + `${questions.length}`;    
+            
+        this.updateQuestionNumber();
         // display the question
         document.getElementById("qQuestions").style.display = "block";
     }
 
     nextQuestion() {
-        if(questionIndex < questions.length) {
+        if(this.questionIndex < questions.length) {
             this.questionIndex++;
-            console.log("questionIndex is now: " + this.questionIndex);
-            document.getElementById("number").innerHTML = `${this.questionIndex + 1}` + "/" + `${questions.length}`;
+            // console.log("questionIndex is now: " + this.questionIndex);
+            this.updateQuestionNumber();
+            let q = document.getElementById("question");
+            let choices = [];
+            choices.push(document.getElementById("choice1"));
+            choices.push(document.getElementById("choice2"));
+            choices.push(document.getElementById("choice3"));
+            choices.push(document.getElementById("choice4"));
+        
+            let question = questions[this.questionIndex];
+            // console.log(question.statement)
+            q.innerHTML = question.statement;
+        
+            for (let i = 0; i < question.choices.length; i++) {
+                choices[i].innerHTML = question.choices[i];
+            }
         }
+    }
+
+    updateQuestionNumber() {
+        document.getElementById("number").innerHTML = `${this.questionIndex + 1}` + "/" + `${questions.length}`;
+        // console.log("test update")
     }
 }
 
