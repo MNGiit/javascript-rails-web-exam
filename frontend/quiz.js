@@ -78,6 +78,10 @@ class Quiz {
         // display the question
         document.getElementById("qQuestions").style.display = "block";
     }
+
+    nextQuestion() {
+        return "this function is called nextQuestion";
+    }
 }
 
 
