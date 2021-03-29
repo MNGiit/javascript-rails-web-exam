@@ -83,7 +83,8 @@ class Quiz {
     nextQuestion() {
         if(questionIndex < questions.length) {
             this.questionIndex++;
-            console.log("questionIndex is now: " + questionIndex);
+            console.log("questionIndex is now: " + this.questionIndex);
+            document.getElementById("number").innerHTML = `${this.questionIndex + 1}` + "/" + `${questions.length}`;
         }
     }
 }
