@@ -82,8 +82,8 @@ class Quiz {
 
     nextQuestion() {
         if(questionIndex < questions.length) {
-            questionIndex++;
-            console.log("added 1 to questionIndex");
+            this.questionIndex++;
+            console.log("questionIndex is now: " + questionIndex);
         }
     }
 }
