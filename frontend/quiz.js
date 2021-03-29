@@ -101,6 +101,16 @@ class Quiz {
                 choices[i].innerHTML = question.choices[i];
             }
         }
+        else {
+            for (let i = 0; i < answerKey.length; i++){
+                if(answerKey[i] == answers[i]) {
+                    score++;
+                }
+            }
+            document.getElementById("qQuestions").style.display = "none";
+            document.getElementById("results").style.display = "block";
+            document.getElementById("showResults").innerHTML = "Congrats, you're done with the quiz, with the score of " + quizScore*10;
+        }
     }
 
     updateQuestionNumber() {
