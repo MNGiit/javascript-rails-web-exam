@@ -21,6 +21,7 @@ function fetchQuestionsStartQuiz() {
             }
     }) // end of fetch
     quiz = new Quiz(questions, 10);
+    quiz.startQuiz();
 } // end of function
 // topic button second starts quiz
 
@@ -223,6 +224,8 @@ function startQuiz() {
 }
 
 function nextQuestion() {
+    quiz.nextQuestion();
+    /*
     if(questionIndex < pickedQuestions.length-1) {
         questionIndex++;
         document.getElementById("number").innerHTML = `${questionIndex + 1}` + "/" + `${tenQuestions}`;
@@ -252,6 +255,7 @@ function nextQuestion() {
         // alert("Congrats, you're done with the quiz, with the score of " + quizScore);
         // alert((quizScore/answerKey.length)*100); 
     }
+    */
 }
 
 function retakeQuiz() {
