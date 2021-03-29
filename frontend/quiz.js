@@ -82,7 +82,7 @@ class Quiz {
     }
 
     nextQuestion() {
-        if(this.questionIndex < questions.length) {
+        if(this.questionIndex < this.questions.length) {
             this.questionIndex++;
             // console.log("questionIndex is now: " + this.questionIndex);
             this.updateQuestionNumber();
@@ -114,7 +114,7 @@ class Quiz {
     }
 
     updateQuestionNumber() {
-        document.getElementById("number").innerHTML = `${this.questionIndex + 1}` + "/" + `${questions.length}`;
+        document.getElementById("number").innerHTML = `${this.questionIndex + 1}` + "/" + `${this.questions.length}`;
         // console.log("test update")
     }
 }
