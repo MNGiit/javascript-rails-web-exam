@@ -109,7 +109,7 @@ class Quiz {
             }
             document.getElementById("qQuestions").style.display = "none";
             document.getElementById("results").style.display = "block";
-            document.getElementById("showResults").innerHTML = "Congrats, you're done with the quiz, with the score of " + quizScore*10;
+            document.getElementById("showResults").innerHTML = "Congrats, you're done with the quiz, with the score of " + score*10;
         }
     }
 
