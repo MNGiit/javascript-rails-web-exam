@@ -5,6 +5,7 @@ class Quiz {
         this.answerKey = [];
         this.setAnswerKey();
         this.questionIndex = 0;
+        this.score = 0;
     }
 
     setNumberOfQuestions(questions, number) {
