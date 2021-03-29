@@ -80,10 +80,12 @@ class Quiz {
     }
 
     nextQuestion() {
-        return "this function is called nextQuestion";
+        if(questionIndex < questions.length) {
+            questionIndex++;
+            console.log("added 1 to questionIndex");
+        }
     }
 }
-
 
 
 // const tenQuestions = 10; // eliminate "magic number" in code
