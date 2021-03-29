@@ -4,6 +4,7 @@ class Quiz {
         this.setNumberOfQuestions(questions, number);
         this.answerKey = [];
         this.setAnswerKey();
+        this.questionIndex = 0;
     }
 
     setNumberOfQuestions(questions, number) {
@@ -65,7 +66,7 @@ class Quiz {
         choices.push(document.getElementById("choice3"));
         choices.push(document.getElementById("choice4"));
 
-        let questionIndex = 0;
+        questionIndex = 0;
         let question = questions[questionIndex];
 
         q.innerHTML = question.statement;
