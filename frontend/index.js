@@ -265,7 +265,8 @@ function retakeQuiz() {
 
 function pickAnswer(selected) {
     // alert("Button was clicked! Value is "+ selected);
-    answers[questionIndex] = selected;
+    // answers[questionIndex] = selected;
+    quiz.pickAnswer(selected);
 }
 // put functions above in a separate file
 
