@@ -6,6 +6,7 @@ class Quiz {
         this.setAnswerKey();
         this.questionIndex = 0;
         this.score = 0;
+        this.answers = [];
     }
 
     setNumberOfQuestions(questions, number) {
@@ -116,6 +117,12 @@ class Quiz {
     updateQuestionNumber() {
         document.getElementById("number").innerHTML = `${this.questionIndex + 1}` + "/" + `${this.questions.length}`;
         // console.log("test update")
+    }
+
+    pickAnswer(selected) {
+        console.log("selected is " + selected);
+        console.log("answers are" + answers);
+        // answers[questionIndex] = selected;
     }
 }
 
