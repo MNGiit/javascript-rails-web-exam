@@ -120,9 +120,10 @@ class Quiz {
     }
 
     pickAnswer(selected) {
-        console.log("selected is " + selected);
-        console.log("answers are" + answers);
-        // answers[questionIndex] = selected;
+        // console.log("selected is " + selected);
+        // console.log("answers are" + this.answers);
+        // console.log(this.answers);
+        this.answers[this.questionIndex] = selected;
     }
 }
 
