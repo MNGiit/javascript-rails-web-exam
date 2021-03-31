@@ -83,7 +83,7 @@ class Quiz {
     }
 
     nextQuestion() {
-        if(this.questionIndex < this.questions.length) {
+        if(this.questionIndex < this.questions.length-1) {
             this.questionIndex++;
             // console.log("questionIndex is now: " + this.questionIndex);
             this.updateQuestionNumber();
