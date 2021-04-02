@@ -125,6 +125,10 @@ class Quiz {
         // console.log(this.answers);
         this.answers[this.questionIndex] = selected;
     }
+
+    retakeQuiz() {
+        console.log("called retakeQuiz()");
+    }
 }
 
 
