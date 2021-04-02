@@ -85,7 +85,7 @@ class Quiz {
     nextQuestion() {
         if(this.questionIndex < this.questions.length-1) {
             this.questionIndex++;
-            // console.log("questionIndex is now: " + this.questionIndex);
+
             this.updateQuestionNumber();
             let q = document.getElementById("question");
             let choices = [];
@@ -95,7 +95,7 @@ class Quiz {
             choices.push(document.getElementById("choice4"));
         
             let question = questions[this.questionIndex];
-            // console.log(question.statement)
+
             q.innerHTML = question.statement;
         
             for (let i = 0; i < question.choices.length; i++) {
@@ -105,9 +105,7 @@ class Quiz {
         else {
             for (let i = 0; i < this.answerKey.length; i++){
                 if(this.answerKey[i] == this.answers[i]) {
-                    // console.log("score is: " + this.score);
                     this.score++;
-                    // console.log("new score is: " + this.score);
                 }
             }
             document.getElementById("qQuestions").style.display = "none";
@@ -118,13 +116,9 @@ class Quiz {
 
     updateQuestionNumber() {
         document.getElementById("number").innerHTML = `${this.questionIndex + 1}` + "/" + `${this.questions.length}`;
-        // console.log("test update")
     }
 
     pickAnswer(selected) {
-        // console.log("selected is " + selected);
-        // console.log("answers are" + this.answers);
-        // console.log(this.answers);
         this.answers[this.questionIndex] = selected;
     }
 
