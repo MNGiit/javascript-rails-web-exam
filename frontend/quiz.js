@@ -123,7 +123,11 @@ class Quiz {
     }
 
     retakeQuiz() {
-        console.log("called retakeQuiz()");
+        // console.log("called retakeQuiz()");
+        // questionIndex = 0;
+        // nextQuestion();
+        startQuiz();
+        // document.getElementById("qQuestions").style.display = "block";
         document.getElementById("results").style.display = "none";
     }
 }
