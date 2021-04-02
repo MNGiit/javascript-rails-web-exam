@@ -105,14 +105,14 @@ class Quiz {
         else {
             for (let i = 0; i < this.answerKey.length; i++){
                 if(this.answerKey[i] == this.answers[i]) {
-                    console.log("score is: " + this.score);
+                    // console.log("score is: " + this.score);
                     this.score++;
-                    console.log("new score is: " + this.score);
+                    // console.log("new score is: " + this.score);
                 }
             }
             document.getElementById("qQuestions").style.display = "none";
             document.getElementById("results").style.display = "block";
-            document.getElementById("showResults").innerHTML = "Congrats, you're done with the quiz, with the score of " + score*10;
+            document.getElementById("showResults").innerHTML = "Congrats, you're done with the quiz, with the score of " + this.score*10;
         }
     }
 
