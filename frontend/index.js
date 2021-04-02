@@ -259,7 +259,7 @@ function nextQuestion() {
 }
 
 function retakeQuiz() {
-    startQuiz();
+    quiz.retakeQuiz();
     document.getElementById("results").style.display = "none";
 }
 
