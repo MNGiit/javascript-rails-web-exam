@@ -34,10 +34,6 @@ let answers = [];   // array holds answers picked by user
 let quizScore = 0;
 let questionIndex = 0; // index will navigate through pickedQuestions
 
-function giveQuestion(question) {
-    return question.statement;
-}
-
 function giveChoices(question) {
     let qArr = [];
     qArr.push(question.correct);
@@ -259,6 +255,8 @@ function nextQuestion() {
 }
 
 function retakeQuiz() {
+    // fetchQuestionsStartQuiz()
+    // console.log(quiz.questions);
     quiz.retakeQuiz();
     // document.getElementById("results").style.display = "none";
 }
