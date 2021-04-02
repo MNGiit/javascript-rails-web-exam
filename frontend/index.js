@@ -166,27 +166,6 @@ function get10Questions() {
     }
 }
 
-function createAnswerKey() {
-    // temp to hold questions after change
-    let temp = [];
-    for (let i = 0; i < pickedQuestions.length; i++) {
-        
-        // randomize choices and assign it to choices
-        pickedQuestions[i].choices = randomizeChoices(pickedQuestions[i]);
-        // find where answer is in randomized choices then add it to answer key
-        for (let j = 0; j < pickedQuestions[i].choices.length; j++) {
-            if (pickedQuestions[i].correct == pickedQuestions[i].choices[j]) {
-                answerKey.push(j);
-            }
-        }
-        // remove correct, choiceB, choiceC, choiceD
-        delete pickedQuestions[i].correct;
-        delete pickedQuestions[i].choiceB;
-        delete pickedQuestions[i].choiceC;
-        delete pickedQuestions[i].choiceD;
-    }
-}
-
 function startQuiz() {
     document.getElementById("startQuiz").style.display = "none";
     document.getElementById("fetchQuiz").style.display = "none";
