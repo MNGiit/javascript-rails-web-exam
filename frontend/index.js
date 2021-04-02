@@ -166,38 +166,6 @@ function get10Questions() {
     }
 }
 
-function startQuiz() {
-    document.getElementById("startQuiz").style.display = "none";
-    document.getElementById("fetchQuiz").style.display = "none";
-    document.getElementById("topics").style.display = "none";
-    if(pickedQuestions.length == 0) {
-        // alert("Already have questions.");
-        get10Questions();
-        createAnswerKey();
-    }
-    let q = document.getElementById("question");
-    let aArr = [];
-    aArr.push(document.getElementById("choice1"));
-    aArr.push(document.getElementById("choice2"));
-    aArr.push(document.getElementById("choice3"));
-    aArr.push(document.getElementById("choice4"));
-
-    // set index to 0
-    questionIndex = 0;
-
-    let question = pickedQuestions[questionIndex];
-    // let choices = randomizeChoices(question);
-    // q.innerHTML = giveQuestion(question);
-    q.innerHTML = question.statement;
-
-    for (let i = 0; i < question.choices.length; i++) {
-        aArr[i].innerHTML = question.choices[i];
-    }
-    document.getElementById("number").innerHTML = `${questionIndex + 1}` + "/" + `${tenQuestions}`;    
-    // questionIndex++;
-    document.getElementById("qQuestions").style.display = "block";
-}
-
 function nextQuestion() {
     quiz.nextQuestion();
     /*
