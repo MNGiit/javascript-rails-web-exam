@@ -124,6 +124,7 @@ class Quiz {
 
     retakeQuiz() {
         console.log("called retakeQuiz()");
+        document.getElementById("results").style.display = "none";
     }
 }
 
