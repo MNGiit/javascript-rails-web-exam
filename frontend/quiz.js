@@ -127,7 +127,7 @@ class Quiz {
 
     retakeQuiz() {
         // console.log("called retakeQuiz()");
-        // questionIndex = 0;
+        this.questionIndex = 0;
         // nextQuestion();
         console.log(this.questions)
         this.startQuiz();
