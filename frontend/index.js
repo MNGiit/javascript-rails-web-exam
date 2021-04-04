@@ -25,7 +25,6 @@ function fetchQuestionsStartQuiz() {
 } // end of function
 // topic button second starts quiz
 
-
 const tenQuestions = 10; // eliminate "magic number" in code
 let questions = []; // array holds all questions
 let pickedQuestions = []; // array holds picked questions for quiz
@@ -43,8 +42,6 @@ function giveChoices(question) {
 
     return qArr;
 }
-
-
 
 function randomizeChoices(question) {
     let choices = giveChoices(question);
@@ -176,15 +173,10 @@ function nextQuestion() {
 }
 
 function retakeQuiz() {
-    // fetchQuestionsStartQuiz()
-    // console.log(quiz.questions);
     quiz.retakeQuiz();
-    // document.getElementById("results").style.display = "none";
 }
 
 function pickAnswer(selected) {
-    // alert("Button was clicked! Value is "+ selected);
-    // answers[questionIndex] = selected;
     quiz.pickAnswer(selected);
 }
 // put functions above in a separate file
