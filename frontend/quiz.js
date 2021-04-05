@@ -136,12 +136,3 @@ class Quiz {
         document.getElementById("results").style.display = "none";
     }
 }
-
-
-// const tenQuestions = 10; // eliminate "magic number" in code
-// let questions = []; // array holds all questions
-// let pickedQuestions = []; // array holds picked questions for quiz
-// let answerKey = []; // array holds answers for picked questions for quiz
-// let answers = [];   // array holds answers picked by user
-// let quizScore = 0;
-// let questionIndex = 0; // index will navigate through pickedQuestions
