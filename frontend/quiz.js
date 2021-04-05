@@ -56,7 +56,6 @@ class Quiz {
     }
 
     startQuiz() {
-        console.log(this.questions);
         // don't display
         document.getElementById("startQuiz").style.display = "none";
         document.getElementById("fetchQuiz").style.display = "none";
@@ -104,13 +103,11 @@ class Quiz {
             }
         }
         else {
-            console.log("at grading: " + questions);
             for (let i = 0; i < this.answerKey.length; i++){
                 if(this.answerKey[i] == this.answers[i]) {
                     this.score++;
                 }
             }
-            console.log("done grading: " + questions);
             document.getElementById("qQuestions").style.display = "none";
             document.getElementById("results").style.display = "block";
             document.getElementById("showResults").innerHTML = "Congrats, you're done with the quiz, with the score of " + this.score*10;
@@ -129,9 +126,7 @@ class Quiz {
         // console.log("called retakeQuiz()");
         this.questionIndex = 0;
         // nextQuestion();
-        console.log(this.questions)
         this.startQuiz();
-        console.log(this.questions)
         // document.getElementById("qQuestions").style.display = "block";
         document.getElementById("results").style.display = "none";
     }
