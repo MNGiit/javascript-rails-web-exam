@@ -128,15 +128,6 @@ function addTopicButtonsToDoc() {
 
 
 // put these functions in a separate file
-function get10Questions() {
-    if(pickedQuestions.length > 0) {
-        pickedQuestions = [];
-    }
-    for (let i = 0; i < tenQuestions; i++) {
-        pickedQuestions.push(questions[i]);
-    }
-}
-
 function nextQuestion() {
     quiz.nextQuestion();
     /*
