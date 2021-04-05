@@ -21,14 +21,13 @@ class Quiz {
     setAnswerKey() {
         for(let i = 0; i < this.questions.length; i++) {
             // randomize choices and assign it to choices
-            this.questions[i].choices = this.randomizeChoices(this.questions[i]);
+            this.questions[i].choices = randomizeChoices(this.questions[i]);
             // find where answer is in randomized choices then add i to answer key
             for (let j = 0; j < this.questions[i].choices.length; j++) {
                 if (this.questions[i].correct == this.questions[i].choices[j]) {
                     this.answerKey.push(j);
                 }
             }
-            // remove correct, choiceB, choiceC, choiceD
             delete questions[i].correct;
             delete questions[i].choiceB;
             delete questions[i].choiceC;
