@@ -25,12 +25,11 @@ function fetchQuestionsStartQuiz() {
 } // end of function
 // topic button second starts quiz
 
-
 let questions = []; // array holds all questions
 let pickedQuestions = []; // array holds picked questions for quiz
 let answerKey = []; // array holds answers for picked questions for quiz
 let answers = [];   // array holds answers picked by user
-let quizScore = 0;
+
 let questionIndex = 0; // index will navigate through pickedQuestions
 
 function fetchTopics() {
