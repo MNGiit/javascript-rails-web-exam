@@ -104,12 +104,7 @@ function addTopicsToDoc() {
 
 function addTopicButtonsToDoc() {
     const x = document.getElementById("topics");
-    // fetchTopics();
-    // console.log("Inside addTopicsButtonToDoc");
-    // console.log("There are this many topics: " + topics.length);
-    // console.log(topics.length);
     for (let i = 0; i < topics.length; i++) {
-        // console.log("Inside for loop " + i);
         // create button
         let button = document.createElement("BUTTON");
         // place topic name in text
@@ -117,7 +112,6 @@ function addTopicButtonsToDoc() {
         // add button to html topics
         x.appendChild(button);  
     }    
-  
 }
 
 
