@@ -30,8 +30,6 @@ let pickedQuestions = []; // array holds picked questions for quiz
 let answerKey = []; // array holds answers for picked questions for quiz
 let answers = [];   // array holds answers picked by user
 
-let questionIndex = 0; // index will navigate through pickedQuestions
-
 function fetchTopics() {
 	fetch('http://localhost:3000/topics')
 		.then(response => response.json())
