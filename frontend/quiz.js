@@ -67,8 +67,8 @@ class Quiz {
         choices.push(document.getElementById("choice3"));
         choices.push(document.getElementById("choice4"));
 
-        questionIndex = 0;
-        let question = questions[questionIndex];
+        this.questionIndex = 0;
+        let question = questions[this.questionIndex];
 
         q.innerHTML = question.statement;
 
