@@ -89,14 +89,9 @@ function fetchQuiz() {
 function addTopicsToDoc() {
     const x = document.getElementById("topics");
     let textNode = "";
-    // console.log(x);
     for (let i = 0; i < topics.length; i++) {
-        // console.log(topics[i]); // isn't showing
-        // console.log(topics.length); // isn't showing
-        console.log(i);
         textNode = document.createTextNode(topics[i].name);
         document.getElementById("topics").appendChild(textNode);
-        console.log(topics[i]["name"]);
 
         // create button
         let button = document.createElement("BUTTON");
@@ -105,7 +100,6 @@ function addTopicsToDoc() {
         // add button to html topics
         x.appendChild(button);
     }
-    // console.log(topics);
 }
 
 function addTopicButtonsToDoc() {
