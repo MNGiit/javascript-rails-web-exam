@@ -26,8 +26,6 @@ function fetchQuestionsStartQuiz() {
 // topic button second starts quiz
 
 let questions = []; // array holds all questions
-let answerKey = []; // array holds answers for picked questions for quiz
-let answers = [];   // array holds answers picked by user
 
 function fetchTopics() {
 	fetch('http://localhost:3000/topics')
