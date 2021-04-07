@@ -33,27 +33,6 @@ let answers = [];   // array holds answers picked by user
 let quizScore = 0;
 let questionIndex = 0; // index will navigate through pickedQuestions
 
-function giveChoices(question) {
-    let qArr = [];
-    qArr.push(question.correct);
-    qArr.push(question.choiceB);
-    qArr.push(question.choiceC);
-    qArr.push(question.choiceD);
-
-    return qArr;
-}
-
-function randomizeChoices(question) {
-    let choices = giveChoices(question);
-    for (let i = 0; i < choices.length; i++) {
-        let ran = Math.floor(Math.random() * (i + 1));
-        let temp = choices[i];
-        choices[i] = choices[ran];
-        choices[ran] = temp;
-    }
-    return choices;
-}
-
 function fetchTopics() {
 	fetch('http://localhost:3000/topics')
 		.then(response => response.json())
