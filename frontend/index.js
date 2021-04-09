@@ -25,8 +25,6 @@ function fetchQuestionsStartQuiz() {
 } // end of function
 // topic button second starts quiz
 
-let questions = []; // array holds all questions
-
 function fetchTopics() {
 	fetch('http://localhost:3000/topics')
 		.then(response => response.json())
