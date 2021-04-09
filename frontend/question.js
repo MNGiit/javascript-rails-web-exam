@@ -1,4 +1,5 @@
 class Question {
+    static questions = [];
     constructor(statement, correct, choiceB, choiceC, choiceD) {
         this.statement = statement;
         this.correct = correct;
@@ -6,6 +7,6 @@ class Question {
         this.choiceC = choiceC;
         this.choiceD = choiceD;
 
-        questions.push(this);
+        Quiz.questions.push(this);
     }
 }
