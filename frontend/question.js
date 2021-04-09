@@ -7,6 +7,6 @@ class Question {
         this.choiceC = choiceC;
         this.choiceD = choiceD;
 
-        Quiz.questions.push(this);
+        Question.questions.push(this);
     }
 }
