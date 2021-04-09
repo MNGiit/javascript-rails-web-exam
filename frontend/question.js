@@ -1,5 +1,5 @@
+let questions = [];
 class Question {
-    static questions = [];
     constructor(statement, correct, choiceB, choiceC, choiceD) {
         this.statement = statement;
         this.correct = correct;
@@ -7,6 +7,9 @@ class Question {
         this.choiceC = choiceC;
         this.choiceD = choiceD;
 
-        Question.questions.push(this);
+        // Question.questions.push(this);
+        questions.push(this);
     }
+    // static questions = [];
+    // static testDescription = "will this produce a reference error?";
 }
