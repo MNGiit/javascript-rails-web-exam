@@ -1,11 +1,9 @@
 let quiz = null;
-// click on topic button
-// topic button first fetches questions
+
 function fetchQuestionsStartQuiz() {
 	fetch('http://localhost:3000/topics/quiz')
 		.then(response => response.json())
 		.then(json => {
-            console.log(json);
             for (let i = 0; i< json.length; i++) {
                 // topics.push(new Topic(json[i]["name"]));
                 // new Topic(json[i]["name"]);
@@ -30,7 +28,6 @@ function fetchTopics() {
 		.then(response => response.json())
 		.then(json => {
             for (let i = 0; i< json.length; i++) {
-                // topics.push(new Topic(json[i]["name"]));
                 new Topic(json[i]["name"]);
             }
     })
@@ -40,7 +37,6 @@ function fetchQuiz() {
 	fetch('http://localhost:3000/topics/quiz')
 		.then(response => response.json())
 		.then(json => {
-            console.log(json);
             for (let i = 0; i< json.length; i++) {
                 // topics.push(new Topic(json[i]["name"]));
                 // new Topic(json[i]["name"]);
