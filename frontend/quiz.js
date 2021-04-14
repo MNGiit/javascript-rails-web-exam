@@ -1,7 +1,13 @@
 class Quiz {
-    constructor(questions, number) {
+    constructor(qs, number) {
+        let incoming = qs;
+        console.log("inside Quiz constructor, qs array");
+        console.log(qs);
+
+        console.log("number is: " + number);
+        // this.setNumberOfQuestions(qs, number);
         this.questions = [];
-        this.setNumberOfQuestions(questions, number);
+        this.newSetNumberOfQuestions(qs, number);
         this.answerKey = [];
         this.setAnswerKey();
         this.questionIndex = 0;
@@ -9,29 +15,63 @@ class Quiz {
         this.answers = [];
     }
 
-    setNumberOfQuestions(questions, number) {
+    newSetNumberOfQuestions(qs, number) {
+        console.log("inside newSetNumberOfQuestions, qs array");
+        console.log(qs);
+        console.log("inside newSetNumberOfQuestions, this.questions array");
+        console.log(this.questions);
+        console.log("inside newSetNumberOfQuestions, this.questions = qs");
+        this.questions = qs;
+        console.log(this.questions);
+
+        //console.log("inside newSetNumberOfQuestions, clearing this.questions");
+        //this.questions = [];
+
+        for(let i = 0; i < number; i++) {
+            console.log("i is " + i);
+        }
+    }
+
+    setNumberOfQuestions(qs, number) {
+        console.log("Inside setNumberOfQuestions, Qs array");
+        console.log(qs);
+        console.log("Number is: " + number);
+
+        /*
         if(this.questions.length > 0) {
             this.questions = [];
         }
+        */
+
+        // this.questions = [];
         for(let i = 0; i < number; i++) {
-            this.questions.push(questions[i])
+            console.log("inside for loop i is: " + i);
+            console.log("qs array is...");
+            console.log(qs);
+
+            console.log("qs of that element is...");
+            console.log(qs[i]);
+
+            questions.push(qs[i]);
         }
     }
 
     setAnswerKey() {
-        for(let i = 0; i < this.questions.length; i++) {
+        for(let i = 0; i < fetchedQuestions.length; i++) {
+            // console.log(this.questions[i]);
             // randomize choices and assign it to choices
-            this.questions[i].choices = this.randomizeChoices(this.questions[i]);
+            // this.questions[i].choices = this.randomizeChoices(this.questions[i]);
+            this.questions[i].choices = this.randomizeChoices(fetchedQuestions[i]);
             // find where answer is in randomized choices then add i to answer key
             for (let j = 0; j < this.questions[i].choices.length; j++) {
                 if (this.questions[i].correct == this.questions[i].choices[j]) {
                     this.answerKey.push(j);
                 }
             }
-            delete questions[i].correct;
-            delete questions[i].choiceB;
-            delete questions[i].choiceC;
-            delete questions[i].choiceD;           
+            delete fetchedQuestions[i].correct;
+            delete fetchedQuestions[i].choiceB;
+            delete fetchedQuestions[i].choiceC;
+            delete fetchedQuestions[i].choiceD;           
         }
     }
 
@@ -45,20 +85,21 @@ class Quiz {
         return choices;
     }
 
-    getChoices(question) {
+    getChoices(q) {
         let choices = [];
-        choices.push(question.correct);
-        choices.push(question.choiceB);
-        choices.push(question.choiceC);
-        choices.push(question.choiceD);
+        choices.push(q.correct);
+        choices.push(q.choiceB);
+        choices.push(q.choiceC);
+        choices.push(q.choiceD);
         return choices;
     }
 
     startQuiz() {
         // don't display
-        document.getElementById("startQuiz").style.display = "none";
-        document.getElementById("fetchQuiz").style.display = "none";
-        document.getElementById("topics").style.display = "none";
+        // document.getElementById("startQuiz").style.display = "none";
+        // document.getElementById("fetchQuiz").style.display = "none";
+        // document.getElementById("topics").style.display = "none";
+        this.hideButtons();
 
         let q = document.getElementById("question");
         let choices = [];
@@ -68,11 +109,19 @@ class Quiz {
         choices.push(document.getElementById("choice4"));
 
         this.questionIndex = 0;
-        let question = questions[this.questionIndex];
+        console.log("Inside startQuiz, this.questions array");
+        console.log(this.questions); // questions not defined, use this.
+        console.log("Inside startQuiz, question should be: ")
+        let question = this.questions[this.questionIndex];
+        console.log(question);
 
-        q.innerHTML = question.statement;
+        // let numberOfChoices = this.questions[this.questionIndex].choices.length;
+        // console.log("number of choices: " + numberOfChoices);
+        //q.innerHTML = question.statement;
+        q.innerHTML = this.questions[this.questionIndex];
 
-        for (let i = 0; i < question.choices.length; i++) {
+        for (let i = 0; i < question.choices.length; i++) { // question.choices.length gives error undefined
+            //choices[i].innerHTML = question.choices[i];
             choices[i].innerHTML = question.choices[i];
         }
             
@@ -128,5 +177,11 @@ class Quiz {
         this.startQuiz();
         // document.getElementById("qQuestions").style.display = "block";
         document.getElementById("results").style.display = "none";
+    }
+
+    hideButtons() {
+        document.getElementById("startQuiz").style.display = "none";
+        document.getElementById("fetchQuiz").style.display = "none";
+        document.getElementById("topics").style.display = "none";
     }
 }
