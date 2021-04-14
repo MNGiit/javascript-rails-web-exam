@@ -1,34 +1,46 @@
 class Quiz {
-    constructor(qs, number) {
-        let incoming = qs;
-        console.log("inside Quiz constructor, qs array");
-        console.log(qs);
+    constructor() {
+        //let incoming = qs;
+        //console.log("inside Quiz constructor, qs array");
+        //console.log(qs);
 
-        console.log("number is: " + number);
+        //console.log("number is: " + number);
+
+        // error with undefined
         // this.setNumberOfQuestions(qs, number);
         this.questions = [];
-        this.newSetNumberOfQuestions(qs, number);
+        //this.setNumberOfSelectedQuestions(qs, number);
+
+
         this.answerKey = [];
-        this.setAnswerKey();
+        //this.setAnswerKey();
         this.questionIndex = 0;
         this.score = 0;
         this.answers = [];
     }
 
-    newSetNumberOfQuestions(qs, number) {
-        console.log("inside newSetNumberOfQuestions, qs array");
+    setNumberOfSelectedQuestions(qs, number) {
+        console.log("inside setNumberOfSelectedQuestions, qs array");
         console.log(qs);
-        console.log("inside newSetNumberOfQuestions, this.questions array");
-        console.log(this.questions);
-        console.log("inside newSetNumberOfQuestions, this.questions = qs");
-        this.questions = qs;
-        console.log(this.questions);
+        //console.log("inside setNumberOfSelectedQuestions, this.questions array");
+        //console.log(this.questions);
 
-        //console.log("inside newSetNumberOfQuestions, clearing this.questions");
+        //console.log("inside setNumberOfSelectedQuestions, this.questions = qs");
+        //this.questions = qs;
+        //console.log(this.questions);
+
+        console.log("inside setNumberOfSelectedQuestions, selectedQuestions array");
+        console.log(selectedQuestions);
+
+
+        //console.log("inside setNumberOfSelectedQuestions, clearing this.questions");
         //this.questions = [];
 
         for(let i = 0; i < number; i++) {
             console.log("i is " + i);
+            console.log(qs[i]);
+            // this.questions.push(qs[i]);
+            this.addQuestionToSelectedQuestions(qs, i);
         }
     }
 
@@ -68,6 +80,10 @@ class Quiz {
                     this.answerKey.push(j);
                 }
             }
+
+            console.log("Inside setAnswerKey, answerKey array");
+            console.log(this.answerKey);
+
             delete fetchedQuestions[i].correct;
             delete fetchedQuestions[i].choiceB;
             delete fetchedQuestions[i].choiceC;
@@ -183,5 +199,28 @@ class Quiz {
         document.getElementById("startQuiz").style.display = "none";
         document.getElementById("fetchQuiz").style.display = "none";
         document.getElementById("topics").style.display = "none";
+    }
+
+    addQuestions(qs) {
+        this.questions = qs;
+    }
+
+    addQuestion(qs, index) {
+        console.log("Inside addQuestion, qs array");
+        console.log(qs);
+        console.log("Inside addQuestion, index is: " + index);
+        this.questions.push(qs[index]);
+        console.log("Inside addQuestion, this.questions element is...")
+        console.log(this.questions[index]);
+    }
+
+    addQuestionToSelectedQuestions(qs, index) {
+        console.log("Inside addQuestion, qs array");
+        console.log(qs);
+        console.log("Inside addQuestion, index is: " + index);
+        selectedQuestions.push(qs[index]);
+        //selectedQuestions.push(fetchedQuestions[index]);
+        console.log("Inside addQuestion, selectedQuestion element is...")
+        console.log(selectedQuestions[index]);
     }
 }
